@@ -1,0 +1,410 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Led";
+  src: url(The\ Led\ Display\ St.ttf);
+}
+
+@font-face {
+  font-family: "Tetris";
+  src: url(Tetris.ttf);
+}
+
+@font-face {
+  font-family: "Arcade";
+  src: url(ARCADECLASSIC.TTF);
+}
+
+@font-face {
+  font-family: "Videogame";
+  src: url(Gameplay.ttf);
+}
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+body {
+  background: rgb(66,65,80);
+  background: radial-gradient(circle, rgba(66,65,80,1) 0%, rgba(2,2,3,1) 90%, rgba(7,8,8,1) 100%);
+  /*
+  background-color: #28282B;
+  background-size: 150%;
+  animation: bganimation 14s infinite;
+  */
+  color: #2e1c1c;
+  font-family: 'Planet-Kosmos', sans-serif;
+}
+
+.button-92 { --c: #fff; /* text color */ background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat, #370bf8; /* background color */ color: #0000; border: none; transform: perspective(500px) rotateY(calc(20deg*var(--_i,-1))); text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c), calc(var(--_i,-1)*-0.08em)  .01em 2px #0004; outline-offset: .1em; transition: 0.3s; } .button-92:hover, .button-92:focus-visible { --_p: 0%; --_i: 1; } .button-92:active { text-shadow: none; color: var(--c); box-shadow: inset 0 0 9e9q #0005; transition: 0s; } .button-92 { font-weight: bold; font-size: 2rem; margin: 0; cursor: pointer; padding: .1em .3em; border-radius: 7px; font-family: 'Arcade'; }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 120px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  border-bottom: 3px solid #370bf8;
+}
+
+header img {
+  width: 40px;
+}
+
+.logo {
+  position: relative;
+  font-size: 25px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.oasisspan {
+  font-family: 'Led';
+  color: #ffffff;
+  text-shadow: 2px 0 #3816ce, -2px 0 #3816ce, 0 2px #3816ce, 0 -2px #3816ce,
+  1px 1px #3816ce, -1px -1px #3816ce, 1px -1px #3816ce, -1px 1px #3816ce;
+}
+
+.arcadespan {
+  color: #3816ce;
+  font-family: 'Tetris';
+}
+
+header nav a {
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: 0.7s ease;
+  font-family: 'Arcade';
+}
+
+nav a:hover {
+  color: #370bf8;
+}
+
+.ParallaxVideo{ 
+  /*   height: 300px; */
+    padding: 0px; 
+    overflow: hidden;
+  }
+
+  .ParallaxVideo video{ 
+      min-width: 100%;
+      width: 100px;
+   /*    
+     position: fixed;
+      top:0;
+    */
+      z-index: -9999;
+  }
+  .ParallaxVideo h3 {
+      color: #fff;
+      font-size: 76px;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+  }
+
+.uppercase {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  font-size: 60px;
+  text-shadow: 1px 8px #3816ce;
+  font-family: 'Videogame', sans-serif;
+
+}
+
+.hero h1 {
+  font-family: 'Arcade';
+  margin-top: 150px;
+  text-align: center;
+  padding: 30px;
+  color: #fff;
+}
+
+.hero p {
+  margin-bottom: 100px;
+}
+
+/*Efecto arcoíris para texto*/
+
+.h1span {
+  font-family: 'Arcade';
+  margin-left: 10px;
+  font-size: 3rem;
+  background: linear-gradient(90deg, #ff00f3, #0033ff, #3a4ab5, #09e7dc, #eef107, #ececec );
+  background-size: 400%;
+  letter-spacing: 5px;
+  font-weight: 600;
+  word-spacing: 5px;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: radbganimation 10s linear infinite;
+}
+
+@keyframes radbganimation {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 400%;
+  }
+}
+
+h2 {
+  font-size: 35px;
+  text-shadow: 2px 0 #7d11ea, -2px 0 #7d11ea, 0 2px #7d11ea, 0 -2px #7d11ea,
+  1px 1px #7d11ea, -1px -1px #7d11ea, 1px -1px #7d11ea, -1px 1px #7d11ea;
+  font-family: "Led";
+  color: #d5d0d0;
+  text-transform: uppercase;
+}
+
+p, i {
+  font-family: San Francisco, sans-serif;
+}
+
+/*Contenedores*/
+
+.pong-container {
+  display: block;
+  margin: 0 auto;
+  background-color: rgb(214, 219, 216);
+  max-width: 30%;
+  padding: 20px;
+  border-radius: 40px;
+  margin-bottom: 30px;
+  box-shadow: 4px 4px #88878b;
+}
+
+.pong-container:hover {
+  box-shadow: 2px 4px #3816ce;
+  transition: 0.5s ease;
+}
+
+.tennis-container {
+  display: block;
+  margin: 0 auto;
+  background-color: rgb(214, 219, 216);
+  max-width: 30%;
+  padding: 20px;
+  border-radius: 40px;
+  margin-bottom: 30px;
+  box-shadow: 4px 4px #88878b;
+}
+
+.tennis-container:hover {
+  box-shadow: 2px 4px #3816ce;
+  transition: 0.5s ease;
+}
+
+.paloencebado-container {
+  display: block;
+  margin: 0 auto;
+  background-color: rgb(214, 219, 216);
+  max-width: 30%;
+  padding: 20px;
+  border-radius: 40px;
+  margin-bottom: 30px;
+  box-shadow: 4px 4px #88878b;
+}
+
+.paloencebado-container:hover {
+  box-shadow: 2px 4px #3816ce;
+  transition: 0.5s ease;
+}
+
+.miniwar-container {
+  display: block;
+  margin: 0 auto;
+  background-color: rgb(214, 219, 216);
+  max-width: 30%;
+  padding: 20px;
+  border-radius: 40px;
+  margin-bottom: 30px;
+  box-shadow: 4px 4px #88878b;
+}
+
+.miniwar-container:hover {
+  box-shadow: 2px 4px #3816ce;
+  transition: 0.5s ease;
+}
+
+.evidence-container {
+  display: block;
+  margin: 0 auto;
+  background-color: rgb(214, 219, 216);
+  max-width: 70%;
+  padding: 20px;
+  border-radius: 40px;
+  margin-bottom: 30px;
+  box-shadow: 4px 4px #88878b;
+}
+
+.evidence-container:hover {
+  box-shadow: 2px 4px #3816ce;
+  transition: 0.5s ease;
+}
+
+/*Contenido de los divs*/
+
+.pong-container h2, .pong-container p {
+  text-align: center;
+}
+
+#pongimg {
+  width: 270px;
+  padding: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.tennis-container h2, .tennis-container p {
+  text-align: center;
+}
+
+#tennisimg {
+  width: 270px;
+  padding: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+.paloencebado-container h2, .paloencebado-container p {
+  text-align: center;
+}
+
+#paloencebadoimg {
+  width: 270px;
+  padding: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+.miniwar-container h2, .miniwar-container p {
+  text-align: center;
+}
+
+#miniwarimg {
+  width: 270px;
+  padding: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+.evidence-container h2, .evidence-container p, .evidence-container i {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#evidenceimg {
+  width: 600px;
+  padding: 20px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 60px;
+}
+
+
+.pong-container button, .tennis-container button, .paloencebado-container button, .miniwar-container button {
+  display: block;
+  margin: 0 auto;
+}
+
+.googlemaps {
+  display: block;
+  border-radius: 30px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  
+}
+
+footer i {
+  text-align: center;
+  display: block;
+  color: #fff;
+  font-size: 12px;
+
+}
+
+/*
+
+@keyframes bganimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  75% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+*/
+
+@media only screen and (max-width: 1000px) {
+  
+  #tennisimg {
+    width: 200px;
+  }
+
+  #pongimg {
+    width: 200px;
+  }
+
+  .button-92  { --c: #fff; /* text color */ background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat, #3816ce; /* background color */ color: #0000; border: none; transform: perspective(500px) rotateY(calc(20deg*var(--_i,-1))); text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c), calc(var(--_i,-1)*-0.08em)  .01em 2px #0004; outline-offset: .1em; transition: 0.3s; } .button-92:hover, .button-92:focus-visible { --_p: 0%; --_i: 1; } .button-92:active { text-shadow: none; color: var(--c); box-shadow: inset 0 0 9e9q #0005; transition: 0s; } .button-92 { font-weight: bold; font-size: 1.5rem; margin: 0; cursor: pointer; padding: .1em .3em; border-radius: 7px; font-family: 'Arcade'; }
+
+}
+
+@media only screen and (max-width: 780px) {
+  
+  #tennisimg {
+    width: 100px;
+  }
+
+  #pongimg {
+    width: 100px;
+  }
+
+  #paloencebadoimg {
+    width: 100px;
+  }
+
+  #miniwarimg {
+    width: 100px;
+  }
+
+  .button-92  { --c: #fff; /* text color */ background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat, #3816ce; /* background color */ color: #0000; border: none; transform: perspective(500px) rotateY(calc(20deg*var(--_i,-1))); text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c), calc(var(--_i,-1)*-0.08em)  .01em 2px #0004; outline-offset: .1em; transition: 0.3s; } .button-92:hover, .button-92:focus-visible { --_p: 0%; --_i: 1; } .button-92:active { text-shadow: none; color: var(--c); box-shadow: inset 0 0 9e9q #0005; transition: 0s; } .button-92 { font-weight: bold; font-size: 1rem; margin: 0; cursor: pointer; padding: .1em .3em; border-radius: 7px; font-family: 'Arcade'; }
+
+}
+
+  
+
+
+
+
